@@ -22,6 +22,7 @@ main{
   background-color: rgb(255, 255, 255, 0.7);
   overflow: hidden;
   border-radius: 20px;
+  box-shadow: 1px 2px 20px #F9F9F9;
 }
 .container-logo{
   width: 50%;
@@ -29,20 +30,41 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 form{
-  width: 50%;
+width: 50%;
   height: 100%;
   background: #fff;
+  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
   overflow-y: auto;
   
 }
 form .form-floating{
   width: 50%;
+  position: relative;
+  
+}
+form::-webkit-scrollbar {
+  width: 5px; /* Ancho de la scrollbar vertical */
+}
+
+form::-webkit-scrollbar-track {
+  background: #cccccc; /* Color del track (fondo de la scrollbar) */
+  border-radius: 10px;
+}
+
+form::-webkit-scrollbar-thumb {
+  background: #96ae08; /* Color de la scrollbar */
+  border-radius: 10px;
+}
+
+form::-webkit-scrollbar-thumb:hover {
+  background: #768a06; /* Color de la scrollbar al pasar el ratón por encima */
 }
 input:focus + label{
   top: -18px;
@@ -54,7 +76,6 @@ input:focus + label{
   width: 150px;
   height: 50px;
   border-radius: 20px;
-  justify-self: end;
   border: 1px solid #96ae08;
   margin-bottom: 2rem;
   margin-top: 1rem;

@@ -25,6 +25,7 @@ header {
   display: flex;
   align-content: center;
   border-radius: 0px 0px 20px 20px;
+  box-shadow: 1px 2px 20px #f9f9f9;
 }
 header .container-img {
   width: auto;
@@ -116,7 +117,6 @@ main {
   cursor: pointer;
   transition: transform 0.3s ease-out;
   border: none;
-  
 }
 #btn-al:hover {
   transform: scale(1.1, 1.1);

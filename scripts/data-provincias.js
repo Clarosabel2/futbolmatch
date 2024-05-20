@@ -10,13 +10,13 @@ fetch("https://apis.datos.gob.ar/georef/api/provincias")
   })
   .then((data) => {
     console.log(data);
-    const parametros=data.paramatros;
     const provincias = data.provincias;
 
     provincias.forEach((provincia) => {
       const option = document.createElement("option");
-      option.value = data.parametros.nombre;
+      option.value = provincia.id;
       option.textContent = provincia.nombre;
+      
       droplistProvincia.appendChild(option);
     });
   })
@@ -33,7 +33,7 @@ droplistProvincia.addEventListener("change", function () {
     
   }
   fetch(
-    `https://apis.datos.gob.ar/georef/api/municipios?provincia=${nombreprovincia}`
+    `https://apis.datos.gob.ar/georef/api/municipios?provincia=${nombreprovincia}&max=500`
   )
     .then((response) => {
       if (!response.ok) {
